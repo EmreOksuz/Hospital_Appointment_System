@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ana Ekran</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/sign-in.css">
+</head>
+<body>
+	<div class="container">
+		
+		<h2 class="head">Hastane Randevu Arama</h2>
+	
+<button class="accordion">Þehir</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+</div>
+<button class="accordion">Ýlçeler</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+</div>
+<button class="accordion">Hastane</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+</div><button class="accordion">Polikinik</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+</div><button class="accordion">Doktor</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+</div><button class="accordion">Randevu Saati</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+</div>
+		
+	
+	</div>
+	<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+	
+	
+	
+</body>
+</html> 
+
+
+
+
+
+------------------------------------------------------
+
+
+.accordion {
+  background-color: #1f80af;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: 0.4s;
+	margin-left: 100px;
+		border-radius: 10px;
+}
+
+.active, .accordion:hover {
+  background-color: #0e709e;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+	margin-left: 100px;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+	width: 765px;
+	margin-bottom: 1px;
+	float: left;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+		border-radius: 10px;
+
+}
+
+.panel p {
+	margin: 20px 0;
+}
+
+
